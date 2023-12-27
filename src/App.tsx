@@ -115,7 +115,7 @@ function App() {
                 <CardBody>
                     <div className="flex flex-row space-x-1">
                         <Image
-                            src="images/jalali.png"
+                            src="./images/jalali.png"
                             width={64}
                         />
                         <Input type="text"
@@ -137,7 +137,7 @@ function App() {
                 <CardBody>
                     <div className="flex flex-row space-x-1">
                         <Image
-                            src="images/gregorian.png"
+                            src="./images/gregorian.png"
                             width={64}
                         />
                         <Input type="text"
