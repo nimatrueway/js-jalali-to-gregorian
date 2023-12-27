@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import {Card, CardBody, Divider, Image, Input, Spacer, Textarea} from "@nextui-org/react";
+import {Card, CardBody, CardHeader, Divider, Image, Input, Link, Spacer, Textarea, User} from "@nextui-org/react";
 import {toJalaali, toGregorian} from "jalaali-js";
 import {sprintf} from "sprintf-js";
 import {parseDate} from "chrono-node";
@@ -110,8 +110,12 @@ function App() {
     }
 
     return (
-        <>
-            <Card className="max-w-md">
+        <div className="container p-4">
+            <Card className="max-w-md mx-auto">
+                <CardHeader>
+                    Convenient Jalali ↔️ Gregorian Convertor
+                </CardHeader>
+                <Divider/>
                 <CardBody>
                     <div className="flex flex-row space-x-1">
                         <Image
@@ -155,8 +159,22 @@ function App() {
                         value={gregorian ?? ""}
                     />
                 </CardBody>
+                <Divider/>
+                <CardBody>
+                    <User
+                        name="Nima Taheri"
+                        description={(
+                            <Link href="https://www.linkedin.com/in/nimatrueway/" size="sm" isExternal>
+                                @nimatrueway
+                            </Link>
+                        )}
+                        avatarProps={{
+                            src: "https://avatars.githubusercontent.com/u/2261274?v=4"
+                        }}
+                    />
+                </CardBody>
             </Card>
-        </>
+        </div>
     )
 }
 
